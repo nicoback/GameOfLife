@@ -172,7 +172,7 @@ int main() {
         try {
             aliveCells.insert(strToCell(aliveCoordinates[i]));
         } catch (string e) {
-            cerr << e << endl;
+            cout << e << endl;
             exit(0);
         }
     }
