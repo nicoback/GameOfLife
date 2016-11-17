@@ -66,6 +66,7 @@ int extractCoordinate(string cell, bool isX) {
     try {
         coordinate = stoi((cell.substr(startPos, endPos - startPos)), nullptr, 10);
     } catch (const out_of_range& oor) {
+        (void)oor;
         throw -1;
     }
     return coordinate;
@@ -79,6 +80,7 @@ Cell strToCell(string cell) {
         newCell.x = extractCoordinate(cell, true);
         newCell.y = extractCoordinate(cell, false);
     } catch (int e) {
+        (void)e;
         throw errMsg;
     }
     return newCell;
